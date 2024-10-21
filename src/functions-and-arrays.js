@@ -80,14 +80,13 @@ const words2 = [
 function doesWordExist(array3, word) {
   if (array3.length === 0) {
     return null;
-  } else {
-    for (i = 0; i < array3.length; i++)
-      if (array3[i] === word) {
-        return true;
-      } else {
-        return false;
-      }
   }
+  for (i = 0; i < array3.length; i++) {
+    if (array3[i] === word) {
+      return true;
+    }
+  }
+  return false;
 }
 
 console.log(doesWordExist(words2, "subset"));
